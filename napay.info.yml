@@ -1,0 +1,6 @@
+name: Napay
+type: module
+description: 'Napay mobile money.'
+package: Custom
+core_version_requirement: ^8 || ^9
+
