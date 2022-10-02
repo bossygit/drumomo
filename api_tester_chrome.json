@@ -1,0 +1,374 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "description": "",
+        "id": "689e89b7-76bf-4069-8efc-93b9e1ced878",
+        "name": "Momo"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Scenario",
+            "description": "sandbox user creation",
+            "id": "e01952c4-6b0a-44fb-8504-0e5264496c76",
+            "name": "createUser"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n  \"providerCallbackHost\": \"https://webhook.site/b2be0853-6005-497c-bfae-f9182b169585\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "sandbox.momodeveloper.mtn.com",
+                  "path": "/v1_0/apiuser"
+                },
+                "id": "8615fdfe-9e9f-4e5a-87b3-76a46ba6352f",
+                "name": "create",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "X-Reference-Id",
+                    "value": "ada7d9d7-7a11-49e2-8cdd-69c4636a868d"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Ocp-Apim-Subscription-Key",
+                    "value": "93b02d9b550643219a8d44898909b491"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "sandbox.momodeveloper.mtn.com",
+                  "path": "/v1_0/apiuser/ada7d9d7-7a11-49e2-8cdd-69c4636a868d"
+                },
+                "id": "84e8d321-94c3-4523-9ca3-b5d53ccdc1e2",
+                "name": "getUserApiKey",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Ocp-Apim-Subscription-Key",
+                    "value": "93b02d9b550643219a8d44898909b491"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "sandbox.momodeveloper.mtn.com",
+                  "path": "/v1_0/apiuser/ada7d9d7-7a11-49e2-8cdd-69c4636a868d/apikey"
+                },
+                "id": "6f7820e0-f8c6-4361-887e-48f7df62d816",
+                "name": "ApiKey",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Ocp-Apim-Subscription-Key",
+                    "value": "93b02d9b550643219a8d44898909b491"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "sandbox.momodeveloper.mtn.com",
+                  "path": "/collection/token/"
+                },
+                "id": "d0df657d-50f0-4f8e-a7c3-8d5d826bb898",
+                "name": "getToken",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Ocp-Apim-Subscription-Key",
+                    "value": "93b02d9b550643219a8d44898909b491"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Basic YWRhN2Q5ZDctN2ExMS00OWUyLThjZGQtNjljNDYzNmE4NjhkOjRiNTJjOGZmNjQzYTQ5ZDlhOWU0MDE0YTU0Y2NiZjc3"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n  \"amount\": \"5.0\",\n  \"currency\": \"EUR\",\n  \"externalId\": \"587822\",\n  \"payer\": {\n    \"partyIdType\": \"MSISDN\",\n    \"partyId\": \"02187965\"\n  },\n  \"payerMessage\": \"Paiement commande\",\n  \"payeeNote\": \"commande de \"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "sandbox.momodeveloper.mtn.com",
+                  "path": "/collection/v1_0/requesttopay"
+                },
+                "id": "21662994-8cc4-4702-9b81-977d85f816e1",
+                "name": "RequestToPay",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "X-Reference-Id",
+                    "value": "adcc5686-c465-403d-820d-352003466d71"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "X-Target-Environment",
+                    "value": "sandbox"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Ocp-Apim-Subscription-Key",
+                    "value": "93b02d9b550643219a8d44898909b491"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImFkYTdkOWQ3LTdhMTEtNDllMi04Y2RkLTY5YzQ2MzZhODY4ZCIsImV4cGlyZXMiOiIyMDIwLTA3LTI4VDEyOjIzOjAyLjQ3OSIsInNlc3Npb25JZCI6IjUyODdlNWY3LWM0OTYtNDRjYS1iNWNiLTVkZjEyNDE1MjhhNSJ9.lz7kB25m-DBpVZ-O8YzPFxTQm_mszcNATtqTPUHMDf8lLfEbJVFtXBsIYUHXXgWMP9S5FuvzcdamvX7Lb1qC2Zsk8gCAhzO_lVaC43VoUTpgnJEZI7LmfRkQBX1YF2hcRPsBUI2s0kzaT91Ys82it77TO9TucuWjhJlTMNL40wxy7Ve9qwIKrn2VGCgZZREqubG_ofw8wtAsWlJzpu8PzwyD50SosQnpiaSR-yQpdIYi6MUcTFfGEFWiAAalj0hsutYW3fGhm7KTXvC9bzY8MdKYGEXh1UENEQk8pv4xEXOn_V3eX56pd6n5vfv8LRq9Hi8QGVUSvZXn66AQQ5YFFg"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "sandbox.momodeveloper.mtn.com",
+                  "path": "/collection/v1_0/requesttopay/adcc5686-c465-403d-820d-352003466d71"
+                },
+                "id": "b9e3ec68-62cf-43ce-9edb-28556192d30a",
+                "name": "getRequestedPayment",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "X-Target-Environment",
+                    "value": "sandbox"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Ocp-Apim-Subscription-Key",
+                    "value": "93b02d9b550643219a8d44898909b491"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSMjU2In0.eyJjbGllbnRJZCI6ImFkYTdkOWQ3LTdhMTEtNDllMi04Y2RkLTY5YzQ2MzZhODY4ZCIsImV4cGlyZXMiOiIyMDIwLTA3LTI4VDEzOjQxOjM3LjkyNiIsInNlc3Npb25JZCI6Ijc0NjBhMWQ5LTE3MjItNDhlZi05YWE2LWYyZmFiNWFlNWZiNSJ9.ANm1r5QE0ZobIMvrBpJM2RobEXyd0rBYUX8mULLwkGu4TDTc4Yn3a3RVA6KYKGzvtT6Jj9exuXd9qjv6KV8uAufQrlsAUFS7VLde2wUe3Y11M_p1ez_Zd2yYnD14qp5ChVPwNGwab8itGHBdKIIKRLYmmJZkspRryqVBegITCrhez8iQq8N339EPA9HitekrtNLPH4NNMhYjfwIybsLQA31rFJerd7uiT0BiNDl405WGh0xtl8SdlhXGUX-HncMiwlAtDtVZuk38WmnHjdD2wEQvhLjmdkiHPUgjDW-9HGQho7I2xYS-ykT3S0otEXkC6mpICrsHX5GTH6mHhL29qg"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity": {
+        "type": "Project",
+        "id": "e31bf24a-a873-4e66-b555-a025daff90d1",
+        "name": "drupal"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"name\":\"admin\",\n    \"pass\": \"p@ss_nasande\"\n \n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "_format",
+                    "value": "json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "token",
+                    "value": "sG-43pIwm1kKq9Jujg8yp254YB4rJvmpdXABs8JqUCY"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "nasande.cg",
+              "path": "/user/logout"
+            },
+            "id": "abee66b6-b502-4550-ac22-17b955642890",
+            "name": "login",
+            "headers": []
+          }
+        }
+      ]
+    }
+  ]
+}
